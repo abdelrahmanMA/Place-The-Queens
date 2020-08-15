@@ -1,0 +1,44 @@
+.SVG
+  display: none
+
+.header
+  background: #105E8E
+  color: #fff
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
+  figcaption
+    font-size: 2em
+
+.logo
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  font-family: 'Satisfy', cursive
+
+nav
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    float: left
+    margin: 0
+    cursor: pointer
+    width: 120px
+    text-align: center
+    position: relative
+    &:not(:first-child)
+      margin-left: 20px
+    background: #C65E10
+    box-shadow: 10px 10px 5px 1px #5B4727
+    &:hover
+      transform: scale(1.2, 1.2)
+  a
+    display: block
+    padding: 20px
+    color: #fff
+    text-decoration: none
