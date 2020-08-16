@@ -1,1 +1,22 @@
-<p>game works!</p>
+<app-card>
+  <table class="gird-wrapper">
+    <div class="row lrow">
+      <div class="clabel" *ngFor="let row of board, index as i">{{letter(i)}}</div>
+    </div>
+    <tr [attr.tooltip]="i" class="row" *ngFor="let row of board, index as i">
+      <div class="rlabel">{{n - i}}</div>
+      <td class="cell" [attr.title]="'(' + letter(j) + ',' + i + ')'" *ngFor="let cell of row, index as j" (click)="cellClicked(i,j)">
+        <figure *ngIf="board[i][j]">
+          <svg viewBox="0 0 45 45" width="45" height="45">
+            <use xlink:href="#queen"/>
+          </svg>
+        </figure>
+      </td>
+    </tr>
+  </table>
+  <div class="solvable" (click)="solvable()"><p>Can this be solved <span>?</span></p></div>
+  <div class="btn-wrapper">
+    <button (click)="verify()">Verify</button>
+    <button (click)="solve()">Solve</button>
+  </div>
+</app-card>

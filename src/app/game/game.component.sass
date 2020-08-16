@@ -1,0 +1,54 @@
+.gird-wrapper
+  margin: 0 auto
+  .row
+    display: flex
+    // overflow: visible
+  .lrow
+    margin-left: 8px
+  .cell, .clabel
+    display: inline-block
+    width: 50px
+    text-align: center
+  .cell
+    height: 50px
+    border: 1px dashed var(--primary-color)
+  .clabel
+    margin-bottom: 5px
+  .rlabel
+    margin-right: 5px
+    display: flex
+    align-items: center
+
+table tr:nth-child(odd) td:nth-child(even)
+  background: #000
+
+table tr:nth-child(even) td:nth-child(odd)
+  background: #000
+
+figure
+  margin: 0
+
+.btn-wrapper, .solvable
+  text-align: center
+.solvable
+  cursor: pointer
+  span
+    display: inline-block
+    color: #fff
+    background: #0b0b0b
+    opacity: 0.9
+    width: 1em
+    height: 1em
+    border-radius: 1em
+  p
+    margin-bottom: 10px
+button
+  padding: 10px 20px
+  margin: 10px auto
+  cursor: pointer
+  background-color: var(--primary-color)
+  outline: none
+  border: 1px solid #ddd
+  color: white
+  &:hover
+    background-color: var(--secondary-color)
