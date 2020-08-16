@@ -1,0 +1,19 @@
+<div class="wrapper" >
+  <div class="overlay" (click)="close()"></div>
+  <div class="card">
+    <div class="close-container" (click)="close()">
+      <div class="leftright"></div>
+      <div class="rightleft"></div>
+      <label class="close">close</label>
+    </div>
+    <figure>
+      <svg viewBox="0 0 45 45" width="80" height="80">
+        <use xlink:href="#queen"/>
+      </svg>
+      <figcaption>Place The Queens</figcaption>
+    </figure>
+    <div class="container">
+      <ng-content></ng-content>
+    </div>
+  </div>
+ </div>

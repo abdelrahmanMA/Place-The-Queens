@@ -2,7 +2,7 @@
   display: none
 
 .header
-  background: #105E8E
+  background: var(--primary-color)
   color: #fff
   display: flex
   flex-direction: column
@@ -11,13 +11,13 @@
   height: 100%
   figcaption
     font-size: 2em
+    font-family: 'Satisfy', cursive
 
 .logo
   display: flex
   flex-direction: column
   justify-content: center
   text-align: center
-  font-family: 'Satisfy', cursive
 
 nav
   ul
@@ -33,8 +33,8 @@ nav
     position: relative
     &:not(:first-child)
       margin-left: 20px
-    background: #C65E10
-    box-shadow: 10px 10px 5px 1px #5B4727
+    background: var(--secondary-color)
+    box-shadow: 10px 10px 5px 1px var(--accent-color)
     &:hover
       transform: scale(1.2, 1.2)
   a

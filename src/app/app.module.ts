@@ -8,6 +8,7 @@ import { RulesComponent } from './rules/rules.component';
 import { GameSettingsComponent } from './game-settings/game-settings.component';
 import { GameComponent } from './game/game.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     RulesComponent,
     GameSettingsComponent,
-    GameComponent
+    GameComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
