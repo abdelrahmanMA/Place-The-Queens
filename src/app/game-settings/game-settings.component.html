@@ -1,1 +1,6 @@
-<p>game-settings works!</p>
+<app-card>
+  <p>Please choose n to create n*n grid</p>
+  <small>n is a positive integer</small>
+  <input type="number" id="number" placeholder="Number" name="number" #number (change)="changed(number)" min="1">
+  <div class="btn-wrapper"><button (click)="create()">Create</button></div>
+</app-card>
