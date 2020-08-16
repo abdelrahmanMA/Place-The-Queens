@@ -14,13 +14,16 @@ export class GameSettingsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changed(number: any){
-    if (number.value >= 1) {
-      this.n = number.value;
-    }
-  }
-
   create(){
     this.router.navigate(['/game', {n: Math.floor(this.n)}]);
+  }
+
+  pressed(event: any, number: any){
+    if (number.value != 0 && number.value <= 100) {
+      this.n = Math.abs(number.value);
+    }
+    if(event.key == "Enter"){
+      this.create();
+    }
   }
 }

@@ -1,6 +1,6 @@
 <app-card>
   <p>Please choose n to create n*n grid</p>
   <small>n is a positive integer</small>
-  <input type="number" id="number" placeholder="Number" name="number" #number (change)="changed(number)" min="1">
+  <input type="number" id="number" placeholder="Number" name="number" #number min="1"  max="100" (keyup)="pressed($event, number)">
   <div class="btn-wrapper"><button (click)="create()">Create</button></div>
 </app-card>

@@ -64,9 +64,15 @@ export class GameComponent implements OnInit {
   verify(yes: string = "Correct!", no: string = "Sorry, Try Again"){
     alert(this.verify_board()? yes : no);
   }
-
+  private solvableN(): boolean{
+    let nonSolvable = new Set([0, 2, 3, NaN]);
+    if(nonSolvable.has(this.n)){
+      return false;
+    }
+    return true;
+  }
   solve(){
-    if((this.n == 2 || this.n == 3)){
+    if(!this.solvableN()){
       alert("Unfortunately it's not solvable");
       return 0;
     }
@@ -100,7 +106,12 @@ export class GameComponent implements OnInit {
     }
     window.setTimeout(() => this.verify("Solved!", "Something wen't wrong cantact the administrator"), 300);
   }
+
   solvable(){
-    alert((this.n != 2 && this.n != 3) ? "This is actually solvable": "Unfortunately it's not solvable");
+    alert(this.solvableN() ? "This is actually solvable": "Unfortunately it's not solvable");
+  }
+
+  reset(){
+    this.fillBoard();
   }
 }
